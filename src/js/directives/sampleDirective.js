@@ -1,6 +1,6 @@
-angular.module('sky-tv-grid').directive('sampleDirective', [function() {
+angular.module('sky-tv-grid').directive('sampleDirective', ['skyTvGridOptions', function(skyTvGridOptions) {
     return {
         restrict: 'E',
-        template: '<div>Awesome directive...</div>'
+        template: '<div>Epg endpoint: ' + skyTvGridOptions.endpoints.sampleEndpoint + '</div>'
     };
 }]);

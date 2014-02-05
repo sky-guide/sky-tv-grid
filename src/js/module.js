@@ -1,5 +1,5 @@
 angular.module('sky-tv-grid', ['ngResource'])
-    .value('options', {
+    .value('skyTvGridOptions', {
         endpoints: {
             sampleEndpoint: 'http://sample.endpoint.com'
         }
