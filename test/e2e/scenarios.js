@@ -11,7 +11,7 @@ describe('sky-tv-grid', function() {
     });
 
     it('should have a cool content', function () {
-        expect(element('div').text()).toBe('Awesome directive...');
+        expect(element('div').text()).toBe('Epg endpoint: http://sample.endpoint.com');
     });
 });
 

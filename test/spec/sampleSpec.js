@@ -10,6 +10,6 @@ describe('sample spec', function () {
     }));
 
     it('should attach a list of awesomeThings to the scope', function () {
-        expect(_$injector.get('options').endpoints.sampleEndpoint).toBe('http://sample.endpoint.com');
+        expect(_$injector.get('skyTvGridOptions').endpoints.sampleEndpoint).toBe('http://sample.endpoint.com');
     });
 });
