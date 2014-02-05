@@ -1,0 +1,13 @@
+/node_modules
+*.ipr
+*.iml
+*.iws
+.idea
+.DS_Store
+*.PID
+.gradle/
+build/
+out/
+*.log*
+.sass-cache/
+bower_components
