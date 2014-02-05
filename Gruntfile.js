@@ -136,12 +136,12 @@ module.exports = function (grunt) {
         options: {
             file: 'bower.json',
             npm: false,
-            commitMessage: 'bumping up version to <%= version %>', //default: 'release <%= version %>'
-            tagMessage: 'tagging version <%= version %>', //default: 'Version <%= version %>',
+            commitMessage: 'bumping up version to <%= version %>',
+            tagMessage: 'tagging version <%= version %>',
             github: {
-                repo: 'sky-guide/sky-tv-grid', //put your user/repo here
-                usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
-                passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+                repo: 'sky-guide/sky-tv-grid',
+                usernameVar: 'GITHUB_USERNAME',
+                passwordVar: 'GITHUB_PASSWORD'
             }
         }
     });

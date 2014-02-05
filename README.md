@@ -33,9 +33,22 @@ grunt test-app
 grunt
 ````
 
-### Versioning
+### Releasing
+See [Semantic Versioning](http://semver.org/) for reference.
+
+to release a patch when you make backwards-compatible bug fixes.
+````
+grunt release:patch
 ````
 
+to release a minor version when you add functionality in a backwards-compatible manner, and
+````
+grunt release:minor
+````
+
+to release a major version when you make incompatible API changes
+````
+grunt release:major
 ````
 
 ## License
