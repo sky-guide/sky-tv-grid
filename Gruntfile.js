@@ -139,9 +139,9 @@ module.exports = function (grunt) {
             commitMessage: 'bumping up version to <%= version %>', //default: 'release <%= version %>'
             tagMessage: 'tagging version <%= version %>', //default: 'Version <%= version %>',
             github: {
-                repo: 'sky-guide/sky-tv-grid' //put your user/repo here
-//                usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
-//                passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+                repo: 'sky-guide/sky-tv-grid', //put your user/repo here
+                usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
+                passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
             }
         }
     });
