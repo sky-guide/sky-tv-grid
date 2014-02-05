@@ -132,6 +132,20 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.config('release', {
+        options: {
+            file: 'bower.json',
+            npm: false,
+            commitMessage: 'bumping up version to <%= version %>', //default: 'release <%= version %>'
+            tagMessage: 'tagging version <%= version %>', //default: 'Version <%= version %>',
+            github: {
+                repo: 'sky-guide/sky-tv-grid' //put your user/repo here
+//                usernameVar: 'GITHUB_USERNAME', //ENVIRONMENT VARIABLE that contains Github username
+//                passwordVar: 'GITHUB_PASSWORD' //ENVIRONMENT VARIABLE that contains Github password
+            }
+        }
+    });
+
     grunt.config('karma', {
         unit: {
             configFile: 'karma.conf.js',
