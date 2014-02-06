@@ -1,31 +1,31 @@
 {
-    "name": "sky-tv-grid",
-    "version": "0.0.8",
-    "description": "TV Grid for Sky",
-    "license": "BSKYB",
-    "main": [
-        "dist/images/**",
-        "dist/css/sky-tv-grid.css",
-        "dist/js/sky-tv-grid.js",
-        "dist/js/sky-tv-grid.min.js"
-    ],
-    "ignore": [
-        "**/.*",
-        "node_modules",
-        "bower_components",
-        "test",
-        "src",
-        "Gruntfile.js",
-        "index.html",
-        "package.json",
-        "karma*"
-    ],
-    "dependencies": {
-        "angular": "~1.x",
-        "angular-resource": "~1.x"
-    },
-    "devDependencies": {
-        "angular-mocks": "1.2.6",
-        "angular-scenario": "1.2.6"
-    }
+  "name": "sky-tv-grid",
+  "version": "0.0.10",
+  "description": "TV Grid for Sky",
+  "license": "BSKYB",
+  "main": [
+    "dist/images/**",
+    "dist/css/sky-tv-grid.css",
+    "dist/js/sky-tv-grid.js",
+    "dist/js/sky-tv-grid.min.js"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "src",
+    "Gruntfile.js",
+    "index.html",
+    "package.json",
+    "karma*"
+  ],
+  "dependencies": {
+    "angular": "~1.x",
+    "angular-resource": "~1.x"
+  },
+  "devDependencies": {
+    "angular-mocks": "1.2.6",
+    "angular-scenario": "1.2.6"
+  }
 }
