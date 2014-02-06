@@ -8,10 +8,13 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
 
     grunt.config.init({
-        pkg: grunt.file.readJSON('package.json')
+        pkg: grunt.file.readJSON('bower.json')
     });
 
     grunt.config('clean', {
+        dev: {
+            src: ['src/css']
+        },
         dist: 'dist'
     });
 
@@ -28,13 +31,28 @@ module.exports = function (grunt) {
             options: {
                 jshintrc: 'test/.jshintrc'
             },
-            src: ['test/spec/**/*.js']
+            src: ['test/**/*.js']
         }
     });
 
     var banner = '/*!\n<%= pkg.name %> - <%= pkg.version %>\n' +
         '<%= pkg.description %>\n' +
         'Build date: <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n';
+    grunt.config('sass', {
+        all: {
+            options: {
+                style: 'expanded',
+                compass: true
+            },
+            files: [{
+                expand: true,
+                cwd: 'src/scss',
+                src: ['**/*.scss'],
+                dest: 'src/css/',
+                ext: '.css'
+            }]
+        }
+    });
 
     grunt.config('cssmin', {
         css: {
@@ -44,7 +62,7 @@ module.exports = function (grunt) {
             files: [
                 {
                     dest: 'dist/css/sky-tv-grid.css',
-                    src: ['src/css/sky-tv-grid.css']
+                    src: ['src/css/**/*.css']
                 }
             ]
         }
@@ -110,7 +128,7 @@ module.exports = function (grunt) {
             files: ['src/**/*.js'],
             tasks: ['newer:jshint:src'],
             options: {
-                livereload: true
+                livereload: '<%= connect.options.livereload %>'
             }
         },
         jsTest: {
@@ -118,7 +136,10 @@ module.exports = function (grunt) {
             tasks: ['newer:jshint:test', 'karma']
         },
         gruntfile: {
-            files: ['Gruntfile.js']
+            files: ['Gruntfile.js'],
+            options: {
+                livereload: '<%= connect.options.livereload %>'
+            }
         },
         livereload: {
             options: {
@@ -129,6 +150,10 @@ module.exports = function (grunt) {
                 'src/css/**/*.css',
                 'src/images/**/*.{png,jpg,jpeg,gif,webp,svg}'
             ]
+        },
+        sass: {
+            files: 'src/scss/**/*.scss',
+            tasks: ['sass']
         }
     });
 
@@ -163,7 +188,8 @@ module.exports = function (grunt) {
         }
 
         grunt.task.run([
-            'clean',
+            'clean:dev',
+            'sass',
             'bower-install',
             'connect:livereload',
             'watch'

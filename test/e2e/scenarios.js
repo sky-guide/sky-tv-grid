@@ -1,7 +1,5 @@
-'use strict';
-
-/* http://docs.angularjs.org/guide/dev_guide.e2e-testing */
 describe('sky-tv-grid', function() {
+
     beforeEach(function() {
         browser().navigateTo('index.html');
     });
@@ -13,5 +11,6 @@ describe('sky-tv-grid', function() {
     it('should have a cool content', function () {
         expect(element('div').text()).toBe('Epg endpoint: http://sample.endpoint.com');
     });
+
 });
 

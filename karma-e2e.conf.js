@@ -3,7 +3,9 @@ module.exports = function (config) {
         basePath: '',
         frameworks: ['ng-scenario'],
 
-        files: ['test/e2e/**/*.js'],
+        files: [
+            'test/e2e/**/*.js'
+        ],
         exclude: [],
 
         port: 9003,
