@@ -35,7 +35,7 @@ module.exports = function (grunt) {
         }
     });
 
-    var banner = '/*!\n<%= pkg.name %> - <%= pkg.version %>\n' +
+    var banner = '/*!\n<%= pkg.name %>\n' +
         '<%= pkg.description %>\n' +
         'Build date: <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n';
     grunt.config('sass', {
