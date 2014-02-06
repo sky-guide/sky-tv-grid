@@ -68,6 +68,14 @@ module.exports = function (grunt) {
         }
     });
 
+    grunt.config('copy', {
+        dist: {
+            files: [
+                { expand: true, cwd: 'src', src: ['images/**'], dest: 'dist' }
+            ]
+        }
+    });
+
     grunt.config('concat', {
         dist: {
             options: {
@@ -206,9 +214,11 @@ module.exports = function (grunt) {
     grunt.registerTask('build', [
         'jshint',
         'clean',
+        'sass',
         'cssmin',
         'concat',
-        'uglify'
+        'uglify',
+        'copy'
     ]);
 
     grunt.registerTask('default', [

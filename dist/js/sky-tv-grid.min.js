@@ -1,5 +1,5 @@
 /*!
-sky-tv-grid - 0.0.1
+sky-tv-grid - 0.0.8
 TV Grid for Sky
 Build date: 2014-02-06 
 */
