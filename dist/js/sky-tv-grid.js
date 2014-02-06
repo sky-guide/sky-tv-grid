@@ -1,7 +1,7 @@
 /*!
 sky-tv-grid - 0.0.1
 TV Grid for Sky
-Build date: 2014-02-05 
+Build date: 2014-02-06 
 */
 angular.module('sky-tv-grid', ['ngResource'])
     .value('skyTvGridOptions', {
